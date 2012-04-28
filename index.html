@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jsPingtester</title>
+<style>
+html, body, #container {margin:0px; height: 100%;}
+#container {min-width: 600px; margin: 0 auto;}
+#corner {padding: 20px; text-align: right; font-family: verdana; position: absolute; top: 0; right: 0; z-index: 9999; width: 300px; height: 200px;}
+input {width: 40px;}
+#host {width: 170px;}
+</style>
+<script src='jquery-1.7.2.min.js'></script>
+<script src='highcharts.js'></script>
+<script src='jspinger.js'></script>
+</head>
+
+<body>
+<div id='pingTest'></div>
+<div id="container"></div>
+<div id='corner'>
+Host: <input type='text' id='host' value='www.google.com/ping/{rand}' ></input><br/>
+Average good ping: <span id='average'></span>ms<br/>
+Timeout value: <input type='text' id='tval' value='300' ></input>ms<br/>  
+Ping interval: <input type='text' id='pval' value='3'></input>s<br/>
+Last ping: <span id='lastping'></span>ms<br/>
+Bad ping: <span id='badper'>0</span>%<br/>
+
+</div>
+</body>
+
+</html>
